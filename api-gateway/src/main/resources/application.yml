@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  profiles:
+    active: dev
+    group:
+      dev: routes
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        slidingWindowSize: 10
+        failureRateThreshold: 50.0
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 5
+    instances:
+      default:
+        baseConfig: default

@@ -1,0 +1,30 @@
+apps:
+  apps:
+    - port: 8081
+      version: "1.0.0"
+      name: "module1"
+      http:
+        baseUrl: "http://localhost"
+        routes:
+          - method: "GET"
+            path: "/api/query"
+          - method: "GET"
+            path: "/api/user/{id}"
+    - port: 8082
+      version: "1.0.0"
+      name: "module2"
+      http:
+        baseUrl: "http://localhost"
+        routes:
+          - method: "POST"
+            path: "/api/create"
+            header:
+              "Content-Type": "application/json"
+          - method: "DELETE"
+            path: "/api/delete"
+            header:
+              "Content-Type": "application/json"
+          - method: "PUT"
+            path: "/api/update"
+            header:
+              "Content-Type": "application/json"

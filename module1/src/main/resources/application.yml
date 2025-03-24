@@ -1,0 +1,3 @@
+spring.application.name: module1
+server:
+  port: 8081
