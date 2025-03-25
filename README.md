@@ -22,4 +22,4 @@
 ## 실행 결과
 
 - API Gateway를 8080 포트로, Module1은 8081, Module2는 8082 포트로 서버 기동
-- 8080 포트로 원하는 API의 url로 요청 시 Module1, Module2 중 알맞은 서버로 라우팅 이후 사용자에게 response
+- 8080 포트로 원하는 API의 url로 요청 시 Module1, Module2 중 알맞은 서버로 라우팅 및 해당 서버의 response 사용자에게 전달
